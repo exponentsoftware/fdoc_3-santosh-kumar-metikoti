@@ -1,9 +1,6 @@
-function ArraytoObject(array) {
+const student = ["David", ["HTM", "CSS", "JS", "React"], [98, 85, 90, 95]];
+const [name, skills, scores] = student;
+const [, , jsScore, reactScore] = scores;
+console.log(name, skills, scores);
 
-    return array.map(person => Object.assign(...person.map(([k, v]) => ({ [k]: v }))));
-  }
-  
-  var array = [[["name",'David'], ["skills",['HTM', 'JS', 'CSS', 'React']], ["scores",[98, 85, 90, 95]]]]
-  
-  console.log(ArraytoObject(array));
-   console.table(array);
+console.log(jsScore, reactScore);
